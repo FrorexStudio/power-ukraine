@@ -1,0 +1,7 @@
+@mixin Support ($property, $value) {
+    @supports ((-webkit-#{$property}: $value) or (#{$property}: $value)) {
+        @content;
+
+        #{$property}: $value;
+    }
+}

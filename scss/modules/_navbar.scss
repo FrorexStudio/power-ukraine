@@ -1,0 +1,51 @@
+.navbar {
+    background-color: $color-neutral-dark;
+    padding: 20px 0;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    // backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    // @supports ((-webkit-backdrop-filter: saturate(180%) blur(20px)) or (backdrop-filter: saturate(180%) blur(20px))) {
+    //     background-color: rgba($color-neutral-dark, 0.7);
+    //     backdrop-filter: saturate(180%) blur(20px);
+    // }
+
+    @include Support(backdrop-filter, saturate(180%) blur(20px)) {
+        background-color: rgba($color-neutral-dark, 0.9);
+    }
+    
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+    }
+    
+    &__brand {
+        color: $color-neutral-white;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+    
+    &__links {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
+        list-style-type: none;
+    }
+    
+    &__link {
+        color: $color-neutral-white;
+        transition: $transition-default;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

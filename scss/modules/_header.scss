@@ -1,0 +1,124 @@
+/* Header */
+.header-gif__img {
+    width: 100%;
+    // height: 600px;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* sections */
+
+
+
+
+
+/* cards */
+
+.articles-event__wrapper {
+    width: 100%;
+    /* display: flex; */
+    /* flex-direction: row; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    /* align-items: stretch; */
+}
+
+
+
+/* speakers */
+.speakers__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 30px;
+}
+
+.card-speaker {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: $transition-default;
+    
+    &__wrapper-img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        position: relative;
+        /* height: 100%; */
+        object-fit: cover;
+        object-position: center;
+        overflow: hidden;
+        
+        &__img {
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: $transition-default;
+            transform: scale(1);
+        }
+    }
+    
+    &__name {
+        color: $color-neutral-dark;
+        transition: $transition-default;
+    }
+    
+    &:hover {
+        .card-speaker__wrapper-img__img {
+            transform: scale(1.1) rotate(2deg);
+        }
+        
+        .card-speaker__name {
+            color: $color-primary-500;
+            text-decoration: underline;
+        }
+    }
+    
+}
+
+
+
+
+
+
+.more-links {
+    padding: 60px 0;
+    background-color: $color-secondary-500;
+    width: 100%;
+    color: $color-neutral-white;
+
+    &__articles {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        list-style-type: none;
+    }
+
+    &__article {
+
+        &:first-child {
+            border-top: 2px solid $color-neutral-white;
+        }
+
+        &:last-child {
+            border-bottom: 2px solid $color-neutral-white;
+        }
+
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        padding: 20px 0;
+        border-bottom: 1px solid $color-neutral-white;
+        border-top: 1px solid $color-neutral-white;
+
+        &__item {
+            color: $color-neutral-white;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+    }
+}

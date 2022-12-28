@@ -1,0 +1,12 @@
+.primary-divider {
+    background-color: $color-secondary-500;
+    padding: 12px 0;
+    width: 100%;
+    overflow: hidden;
+
+    &__text {
+        color: $color-neutral-white;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+}

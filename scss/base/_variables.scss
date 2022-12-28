@@ -1,0 +1,24 @@
+// :root {
+//     --color-neutral-white: #ffffff;
+//     --color-neutral-dark: #121212;
+
+// 	--color-light-50: #FAFAFA;
+// 	--color-dark-800: #121212;
+//     --color-primary-500: #1F3480;
+//     --color-secondary-500: #4A19B3;
+//     --color-secondary-600: #3b148f;
+
+//     --transition-default: all .25s ease-in-out;
+// }
+
+$color-neutral-white: #ffffff !default;
+$color-neutral-dark: #121212 !default;
+
+$color-light-50: #FAFAFA !default;
+// $color-dark-800: #121212 !default;
+$color-dark-800: rgb(18, 18, 18) !default;
+$color-primary-500: #1F3480 !default;
+$color-secondary-500: #4A19B3 !default;
+$color-secondary-600: #3b148f !default;
+
+$transition-default: all .25s ease-in-out !default;

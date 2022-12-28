@@ -1,0 +1,41 @@
+.program__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card-program {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px;
+    background-color: $color-neutral-white;
+    width: 100%;
+    transition: $transition-default;
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    &__title {
+        transition: $transition-default;
+        color: $color-primary-500;
+    }
+    
+    &__date {
+        padding: 10px 20px;
+        background-color: $color-secondary-500;
+        color: $color-neutral-white;
+        align-self: flex-start;
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    
+    &:hover .card-program__title {
+        text-decoration: underline;
+        transition: $transition-default;
+    }
+}
