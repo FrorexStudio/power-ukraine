@@ -85,6 +85,11 @@ h3 {
   gap: 30px;
   justify-content: space-between;
 }
+@media screen and (max-width: 992px) {
+  .footer__wrapper {
+    flex-direction: column;
+  }
+}
 .footer__content {
   max-width: 380px;
   display: flex;
@@ -117,6 +122,11 @@ h3 {
   flex-direction: row;
   gap: 15px;
   align-items: stretch;
+}
+@media screen and (max-width: 768px) {
+  .footer__form-content {
+    flex-direction: column;
+  }
 }
 
 /* Header */

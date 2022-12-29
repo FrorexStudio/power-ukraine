@@ -8,6 +8,10 @@
         flex-direction: row;
         gap: 30px;
         justify-content: space-between;
+
+        @include Table {
+            flex-direction: column;
+        }
     }
 
     &__content {
@@ -47,6 +51,10 @@
             flex-direction: row;
             gap: 15px;
             align-items: stretch;
+
+            @include SmallTable {
+                flex-direction: column;
+            }
         }
     }
 }
