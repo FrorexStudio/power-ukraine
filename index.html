@@ -7,10 +7,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.min.css">
 
+    <!-- Library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -259,6 +262,33 @@
     
             </div>
         </section>
+
+        <section class="partners spacer" id="">
+            <div class="container">
+                <h2 class="section-title">Our Partners</h2>
+
+                <div class="partners__wrapper">
+                    <div class="swiper partnersSwiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img class="partners-client" src="img/Client/Google.svg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="partners-client" src="img/Client/Stripe.svg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="partners-client" src="img/Client/Uber.svg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="partners-client" src="img/Client/microsoft.svg" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     
     </main>
 
@@ -268,6 +298,32 @@
         </div>
     </footer>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".partnersSwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },}
+      });
+      
+    </script>
     
     <script src="js/lib/jquery.min.js"></script>
     <script src="js/lib/marquee.min.js"></script>
