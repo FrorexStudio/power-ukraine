@@ -1,3 +1,6 @@
+
+// infinity stroke text 
+
 $(function(){
     $('.primary-divider__text').marquee({
   
@@ -35,6 +38,33 @@ $(function(){
     });
   });
 
+
+
+// Navbar Button 
 $('.navbar-toggle').click(function(){
     $('.navbar-collapse').toggle();
+});
+
+
+
+// Initialize Swiper
+    
+const swiper = new Swiper(".partnersSwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },}
 });
