@@ -1,0 +1,59 @@
+/* speakers */
+.speakers__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 30px;
+
+    @include Table {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include SmallTable {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.card-speaker {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: $transition-default;
+    
+    &__wrapper-img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        position: relative;
+        /* height: 100%; */
+        object-fit: cover;
+        object-position: center;
+        overflow: hidden;
+        
+        &__img {
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: $transition-default;
+            transform: scale(1);
+        }
+    }
+    
+    &__name {
+        color: $color-neutral-dark;
+        transition: $transition-default;
+    }
+    
+    &:hover {
+        .card-speaker__wrapper-img__img {
+            transform: scale(1.1) rotate(2deg);
+        }
+        
+        .card-speaker__name {
+            color: $color-primary-500;
+            text-decoration: underline;
+        }
+    }
+    
+}

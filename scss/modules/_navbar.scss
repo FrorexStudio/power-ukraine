@@ -17,6 +17,10 @@
     @include Support(backdrop-filter, saturate(180%) blur(20px)) {
         background-color: rgba($color-neutral-dark, 0.9);
     }
+
+    @include SmallTable {
+        background-color: $color-neutral-dark;
+    }
     
     &__wrapper {
         display: flex;
@@ -24,20 +28,86 @@
         justify-content: space-between;
         align-items: center;
         gap: 32px;
+
+        @include SmallTable {
+            flex-direction: column;
+        }
     }
-    
+    &__general {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
+        justify-content: space-between;
+
+        @include SmallTable {
+            width: 100%;
+        }
+    }
     &__brand {
         color: $color-neutral-white;
         font-size: 24px;
         text-transform: uppercase;
     }
+
+    &-toggle {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        background-color: transparent;
+        border: none;
+        flex-shrink: 0;
+
+        &:hover {
+            cursor: pointer;
+            // background-color: rgba($color-neutral-dark, 0.5);
+        }
+
+        @include SmallTable {
+            display: flex;
+        }
+    }
     
+
+    &-collapse {
+        display:flex;
+        transition: $transition-default;
+        gap: 30px;
+
+        @media (min-width:769px) {
+            display:flex !important;
+        }
+
+        &:has(.btn) {
+            .navbar__links {
+                @include SmallTable {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        @include SmallTable {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+
     &__links {
         display: flex;
         flex-direction: row;
         gap: 30px;
         align-items: center;
         list-style-type: none;
+
+        @include SmallTable {
+            flex-direction: column;
+            align-items: stretch;
+            width: 100%;
+            gap: 0;
+        }
     }
     
     &__link {
@@ -46,6 +116,22 @@
 
         &:hover {
             text-decoration: underline;
+
+            @include SmallTable {
+                padding: 20px;
+                display: block;
+                width: 100%;
+                border-radius: 10px;
+                background-color: $color-dark-700;
+                text-decoration: none;
+            }
+        }
+
+        @include SmallTable {
+            padding: 20px 20px 20px 0;
+            display: block;
+            width: 100%;
+            border-radius: 10px;
         }
     }
 }
