@@ -50,7 +50,7 @@ $('.navbar-toggle').click(function(){
 // Initialize Swiper
     
 const swiper = new Swiper(".partnersSwiper", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
 
@@ -66,5 +66,5 @@ const swiper = new Swiper(".partnersSwiper", {
     1024: {
       slidesPerView: 3,
       spaceBetween: 30,
-    },}
+    }}
 });
