@@ -6,6 +6,7 @@
     color: $color-neutral-white;
     display: inline-block;
     transition: $transition-default;
+    border: none;
     
     &__primary {
         background-color: $color-secondary-500;

@@ -346,6 +346,7 @@ h3 {
   color: #ffffff;
   display: inline-block;
   transition: all 0.25s ease-in-out;
+  border: none;
 }
 .btn__primary {
   background-color: #4A19B3;
