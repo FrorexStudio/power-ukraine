@@ -132,12 +132,17 @@ h3 {
 /* Header */
 .header-gif__img {
   width: 100%;
-  aspect-ratio: 2/1;
+  aspect-ratio: 16/9;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
   display: block;
+}
+@media screen and (max-width: 992px) {
+  .header-gif__img {
+    margin-top: 85px;
+  }
 }
 
 /* sections */
@@ -179,7 +184,7 @@ h3 {
 
 .header-content__wrapper {
   width: 100%;
-  aspect-ratio: 2/1;
+  aspect-ratio: 16/9;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
