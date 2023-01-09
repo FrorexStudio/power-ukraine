@@ -1,0 +1,60 @@
+.milestones {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/Milestone.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+
+    &__wrapper {
+        // padding: 60px;
+        display: grid;
+        // flex-direction: row;
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+        width: 100%;
+
+        @include Table {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__wrapper-img {
+        width: 100%;
+        position: relative;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        overflow: hidden;
+
+        @include Table {
+            aspect-ratio: 9/16;
+        }
+        
+        &__img {
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: $color-neutral-dark;
+        padding: 60px;
+        color: $color-neutral-white;
+        gap: 30px;
+
+        @include Table {
+            padding: 30px;
+        }
+
+        @include Support(backdrop-filter, saturate(180%) blur(20px)) {
+            background-color: rgba($color-neutral-dark, 0.9);
+        }
+    
+    }
+}

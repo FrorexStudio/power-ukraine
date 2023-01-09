@@ -1,0 +1,60 @@
+.phases {
+    padding: 60px 0;
+    background-color: $color-neutral-dark;
+    
+    &__h2 {
+        margin-bottom: 40px;
+        // padding-inline: 60px;
+        color: $color-neutral-white;
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+        @include Table {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+.card-phases {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px;
+    background-color: $color-neutral-white;
+    width: 100%;
+    transition: $transition-default;
+    
+    @include Table {
+        padding: 30px;
+    }
+
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    &__title {
+        transition: $transition-default;
+        color: $color-primary-500;
+    }
+    
+    &__date {
+        padding: 10px 20px;
+        background-color: $color-secondary-500;
+        color: $color-neutral-white;
+        align-self: flex-start;
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    
+    &:hover .card-phases__title {
+        text-decoration: underline;
+        transition: $transition-default;
+    }
+}

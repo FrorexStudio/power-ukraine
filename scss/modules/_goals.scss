@@ -1,0 +1,31 @@
+.goals {
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        @include Table {
+            flex-direction: column;
+        }
+    }
+
+    &__col {
+        background-color: $color-neutral-white;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include Table {
+            padding: 30px;
+        }
+
+        &__h2 {
+            color: $color-primary-500;
+        }
+
+        &__text {
+            color: $color-neutral-dark;
+        }
+    }
+}
