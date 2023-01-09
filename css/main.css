@@ -565,6 +565,20 @@ h3 {
   overflow: hidden;
 }
 
+.gallerySwiper .swiper-slide {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  width: 100%;
+}
+.gallerySwiper .swiper-slide .gallery-photo {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
 .goals__wrapper {
   display: flex;
   flex-direction: row;
@@ -751,6 +765,57 @@ h3 {
     -webkit-backdrop-filter: saturate(180%) blur(20px);
             backdrop-filter: saturate(180%) blur(20px);
   }
+}
+
+.power__card {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  background-color: #ffffff;
+}
+@media screen and (max-width: 992px) {
+  .power__card {
+    flex-direction: column;
+  }
+}
+.power__card__wrapper-img {
+  position: relative;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  background-image: url("../img/Power.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 992px) {
+  .power__card__wrapper-img {
+    height: 300px;
+  }
+}
+.power__card__wrapper-img__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.power__card__content {
+  width: 100%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 992px) {
+  .power__card__content {
+    padding: 30px;
+  }
+}
+.power__card__content__h2 {
+  color: #1F3480;
 }
 
 /**

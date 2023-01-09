@@ -68,3 +68,27 @@ const swiper = new Swiper(".partnersSwiper", {
       spaceBetween: 30,
     }}
 });
+
+const swiperGallery = new Swiper(".gallerySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    }}
+});
