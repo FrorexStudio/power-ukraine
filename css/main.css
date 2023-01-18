@@ -819,6 +819,9 @@ h3 {
             backdrop-filter: saturate(180%) blur(20px);
   }
 }
+.milestones__media {
+  width: 100%;
+}
 
 .power__card {
   display: flex;
